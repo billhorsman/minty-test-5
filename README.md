@@ -1,5 +1,39 @@
 # Test for minitest-rails 3.0.0.rc1
 
+## UPDATE
+
+This is because `ActionController::TestCase` is deprecated in Rails 5 and will be removed in 5.1. Use `ActiveDispatch::IntegrationTest` instead. It only becomes an issue if you are using the Spec DSL provided by `minitest-rails`.
+
+TL;DR
+
+Use:
+
+```ruby
+# GOOD
+describe WelcomeController do
+
+  it "shows index" do
+    get root_path
+  end
+
+end
+```
+
+instead of:
+
+```ruby
+# BAD
+describe WelcomeController do
+
+  it "shows index" do
+    get :index
+  end
+
+end
+```
+
+---
+
 This demonstrates a problem I'm having with `minitest-rails 3.0.0.rc1` and `rails 5.0.0.rc1`. I've built a very simple Rails 5 app that just has a `welcome#index` route. When I run the tests I get this:
 
 ```
