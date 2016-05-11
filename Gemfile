@@ -14,7 +14,7 @@ end
 group :test do
   gem 'guard-minitest'
   gem 'guard'
-  gem 'minitest-rails', '~> 3.0.0.rc1'
+  gem 'minitest-rails', github: 'blowmage/minitest-rails'
   gem 'rb-fsevent'
   gem 'terminal-notifier-guard'
 end

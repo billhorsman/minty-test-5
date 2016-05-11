@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/blowmage/minitest-rails.git
+  revision: 8be92f837f65101415c45fff7fd492966cf348ee
+  specs:
+    minitest-rails (3.0.0.rc1.20160507123149)
+      minitest (~> 5.8)
+      railties (~> 5.0.0.rc1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,9 +86,6 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    minitest-rails (3.0.0.rc1)
-      minitest (~> 5.8)
-      railties (~> 5.0.0.rc1)
     nenv (0.3.0)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
@@ -162,7 +167,7 @@ DEPENDENCIES
   guard
   guard-minitest
   listen (~> 3.0.5)
-  minitest-rails (~> 3.0.0.rc1)
+  minitest-rails!
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
   rb-fsevent
@@ -173,4 +178,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.11.2
+   1.12.3
